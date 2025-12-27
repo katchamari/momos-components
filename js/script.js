@@ -10,7 +10,9 @@
       return pre;
     }
     const componentSection = document.createElement("section");
-    componentSection.classList.add("component");
+    componentSection.classList.add("component-section");
+    const componentElement = document.createElement("div");
+    componentElement.classList.add("component");
     const componentHeader = document.createElement("header");
     componentHeader.classList.add("component-header");
     componentHeader.innerHTML = `
@@ -41,8 +43,13 @@
     for (let type of ["html", "css", "js"]) {
       componentContent.append(createCodeBlock(type, component[type]));
     }
-    componentSection.append(componentHeader);
-    componentSection.append(componentContent);
+    componentElement.append(componentHeader);
+    componentElement.append(componentContent);
+
+    const heading = document.createElement("h2");
+    heading.textContent = component.name;
+    componentSection.append(heading);
+    componentSection.append(componentElement);
     return componentSection;
   }
 
