@@ -1,0 +1,38 @@
+:root {
+  --modalPadding: 15px;
+}
+.modal-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  transition: opacity 0.3s;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+.modal {
+  background: #fff;
+  padding: var(--modalPadding);
+  border-radius: 15px;
+  max-height: 100%;
+  overflow-y: auto;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+}
+.close-modal {
+  position: absolute;
+  right: var(--modalPadding);
+  top: var(--modalPadding);
+}
+.hidden {
+  display: none;
+}
+.invisible {
+  opacity: 0;
+}

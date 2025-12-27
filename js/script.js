@@ -20,7 +20,7 @@
         <ul>
             <li>
             <ul>
-                <li class="active"><a class="#result">Result</a></li>
+                <li class="result-tab"><a href="#result">Result</a></li>
             </ul>
             </li>
             <li>

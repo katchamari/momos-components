@@ -62,9 +62,6 @@ body {
   display: grid;
   grid-template-columns: 1fr 0fr;
 }
-.component-content:has(.component-code.active) {
-  grid-template-columns: 1fr 1fr;
-}
 .component-result {
   width: 100%;
   height: 100%;
@@ -76,5 +73,24 @@ body {
 }
 .component-code.active {
   display: block;
+}
+.component:not(:has(.component-code.active)) .result-tab {
+  color: #000;
+  background: #fff;
+}
+.component:has(.component-code.active) .component-result {
+  display: none;
+}
+@media only screen and (min-width: 992px) {
+  .component-content:has(.component-code.active) {
+    grid-template-columns: 1fr 1fr;
+  }
+  .component:has(.component-code.active) .component-result {
+    display: block;
+  }
+  .component .result-tab {
+    color: #000;
+    background: #fff;
+  }
 }
 /* component container end */
