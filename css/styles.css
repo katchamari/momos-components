@@ -1,0 +1,74 @@
+/* resets start */
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background: #eee7e7;
+  padding: 15px;
+}
+/* resets end */
+/* global styles start */
+.container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* global styles end */
+/* component container start */
+.component {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 15px;
+  color: #fff;
+  border: 3px solid #000;
+  overflow: hidden;
+}
+.component-header {
+  background: #000;
+}
+.component-header nav > ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.component-header ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.component-header ul li.active {
+  background: #fff;
+  color: #000;
+}
+.component-header ul li a {
+  display: block;
+  padding: 15px;
+  color: inherit;
+  cursor: pointer;
+}
+.component-content {
+  height: 300px;
+  transition: grid-template-columns 0.2s;
+  display: grid;
+  grid-template-columns: 1fr 0fr;
+}
+.component-content:has(.component-code.active) {
+  grid-template-columns: 1fr 1fr;
+}
+.component-result {
+  width: 100%;
+  height: 100%;
+}
+.component-code {
+  min-width: 0;
+  display: none;
+  width: 100%;
+}
+.component-code.active {
+  display: block;
+}
+/* component container end */

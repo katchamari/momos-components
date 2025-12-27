@@ -1,0 +1,3 @@
+node generateJSON.js
+
+git add .
