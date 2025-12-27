@@ -49,6 +49,8 @@ body {
   padding: 15px;
   color: inherit;
   cursor: pointer;
+  text-decoration: none;
+  font-weight: 700;
 }
 .component-content {
   height: 300px;

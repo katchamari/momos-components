@@ -4,13 +4,17 @@
   "main": "generateJSON.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky .husky"
+    "prepare": "husky .husky",
+    "dev": "live-server",
+    "watchComponents": "nodemon --watch components generateJSON.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "husky": "^9.1.7"
+    "husky": "^9.1.7",
+    "live-server": "^1.2.2",
+    "nodemon": "^3.1.11"
   }
 }
