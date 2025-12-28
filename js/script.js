@@ -81,6 +81,7 @@
         if (selectedBlockAlreadyActive) return;
         selectedBlock.classList.add("active");
         this.closest("li").classList.add("active");
+        Prism.highlightElement(selectedBlock.querySelector("code"));
       });
     }
   }
