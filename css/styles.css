@@ -1,3 +1,8 @@
+/* variables start */
+:root {
+  --offBlack: #0b0f27;
+}
+/* variables end */
 /* resets start */
 * {
   box-sizing: border-box;
@@ -28,11 +33,11 @@ body {
   background: #fff;
   border-radius: 15px;
   color: #fff;
-  border: 3px solid #000;
+  border: 3px solid #212124;
   overflow: hidden;
 }
 .component-header {
-  background: #000;
+  background: var(--offBlack);
 }
 .component-header nav > ul {
   display: grid;
@@ -46,7 +51,7 @@ body {
 }
 .component-header ul li.active {
   background: #fff;
-  color: #000;
+  color: var(--offBlack);
 }
 .component-header ul li a {
   display: block;
@@ -66,20 +71,20 @@ body {
   width: 100%;
   height: 100%;
 }
-.component-code {
+.component-content .component-code {
   min-width: 0;
   display: none;
   width: 100%;
   height: 100%;
-  margin: auto;
+  margin: 0;
   overflow: auto;
-  color: #000;
+  color: var(--offBlack);
 }
 .component-code.active {
   display: block;
 }
 .component:not(:has(.component-code.active)) .result-tab {
-  color: #000;
+  color: var(--offBlack);
   background: #fff;
 }
 .component:has(.component-code.active) .component-result {
@@ -93,7 +98,7 @@ body {
     display: block;
   }
   .component .result-tab {
-    color: #000;
+    color: var(--offBlack);
     background: #fff;
   }
 }
