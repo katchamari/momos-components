@@ -13,6 +13,7 @@ body {
   margin: 0;
   background: #eee7e7;
   padding: 15px;
+  color: var(--offBlack);
 }
 /* resets end */
 /* global styles start */
