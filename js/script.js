@@ -84,5 +84,20 @@
         Prism.highlightElement(selectedBlock.querySelector("code"));
       });
     }
+
+    section
+      .querySelector(".result-tab a")
+      .addEventListener("click", function (e) {
+        e.preventDefault();
+        const component = this.closest(".component");
+        for (let block of component.querySelectorAll(".component-code")) {
+          block.classList.remove("active");
+        }
+        for (let tab of component.querySelectorAll(
+          ".component-header li:has(>.view-code)"
+        )) {
+          tab.classList.remove("active");
+        }
+      });
   }
 })();
